@@ -29,4 +29,11 @@ public class Task {
 
     private UUID idUser;
     private String prioridade;
+
+    public void setTitulo(String titulo) throws Exception{
+        if(titulo.length() > 50){
+            throw new Exception("O campo titulo deve conter no máximo 50 caracteres.");
+        }   
+        this.titulo = titulo;
+    }
 }
